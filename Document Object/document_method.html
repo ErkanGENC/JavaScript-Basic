@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Method uygulamaları</title>
+    <style>
+        #hava {
+            width: 250px;
+            height: 150px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="baslik"></h1>
+    <p id="paragraf1"></p>
+    <p id="paragraf2"></p>
+
+    <img id="hava" src="hava/bulutlu.jpg" onmouseover="gunesli()" onmouseleave="bulutlu()" onmousedown="gece()">
+
+    <script>
+
+        //içerik değiştirme.
+        document.getElementById("baslik").innerHTML = "Baslik ifadesi";
+        document.getElementById("paragraf1").innerHTML = "<b>paragraf ifadesi</b>";
+        document.getElementById("paragraf2").innerText = "<b>paragraf ifadesi</b>";
+
+        //görsel değiştirme.
+        document.getElementById("paragraf1").style.color = "blue";
+        document.getElementById("paragraf1").style.fontFamily = "Arial"; 
+        document.getElementById("paragraf1").style.fontStyle = "italic";
+
+        //Özellik değiştirme.
+
+        var ozellik = document.getElementById("hava");
+
+        function gunesli() {
+            ozellik.src = "hava/günesli.jpg";
+
+        }
+
+        function gece() {
+            ozellik.src = "hava/gece.jpg";
+        }
+        function bulutlu() {
+            ozellik.src = "hava/bulutlu.jpg";
+        }
+
+    </script>
+</body>
+
+</html>

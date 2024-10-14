@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dizi Giris.</title>
+</head>
+<body>
+    <script>
+        /*
+        var dizi = new Array(5); // 5 elemanlı dizi tanımlandı
+        
+        // dizinin elamanlarını for ile kullanıcıdan alıp dizinin içine kaydedelim.
+
+        for(var i=0;i<dizi.length;i++)
+            dizi[i]= prompt(i+".indis değerini giriniz: ");
+        
+            //dizinin elemanlarını alt alta yazdır.
+            for(var i=0;i<dizi.length;i++)
+                document.write(i+".indis Elemanı: "+dizi[i]+"<br>");
+
+            */
+
+            //dizinin elemanlarını kullanıcıdan alıp alınan elemanların ortalamasını al.
+
+            var dizi = new Array(5);
+            var i=0,diziToplam=0;
+            for(i=0;i<dizi.length;i++)
+                dizi[i]=prompt(i+".indisi giriniz: ");
+            
+                for(i=0;i<dizi.length;i++)
+                    diziToplam+=dizi[i];
+                
+                var ortalama=diziToplam/dizi.length;
+                document.write("dizinin ortalaması: "+ortalama);
+    </script>
+</body>
+</html>

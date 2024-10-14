@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>oop alan uygulaması</title>
+</head>
+<body>
+    <script>
+        class dikdortgen{
+
+            static yukseklik=0;
+            static genislik=0;
+
+            constructor(yukseklik,genislik){
+                this.yukseklik=yukseklik;
+                this.genislik=genislik;
+            }
+
+            alan(yukseklik,genislik){
+                return yukseklik*genislik;
+            }
+
+            cevre(yukseklik,genislik){
+                return 2*(yukseklik+genislik);
+            }
+        }
+        var x=Number(prompt("yüksekligi giriniz: "));
+        var y=Number(prompt("genisliği giriniz: "));
+        
+        var a=new dikdortgen(x,y);
+
+        document.write("alan: "+a.alan(x,y)+" çevresi: "+a.cevre(x,y));
+
+
+    </script>
+</body>
+</html>

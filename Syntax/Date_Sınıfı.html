@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarih-Saat uygulaması</title>
+</head>
+
+<body>
+    <script>
+        var zaman = new Date(); // date sınıfına ait zaman adında nesnemi oluşturdum.
+        var gun = zaman.getDate();
+        var ay = zaman.getMonth();
+        var yil = zaman.getFullYear();
+        var saat = zaman.getHours();
+        var dakika = zaman.getMinutes();
+        var saniye = zaman.getSeconds();
+
+        document.write("Tarih: " + gun + "-" + (ay + 1) + "-" + yil + "<br>");
+        document.write("Saat: " + saat + ":" + dakika + ":" + saniye);
+
+        
+
+    </script>
+</body>
+
+</html>

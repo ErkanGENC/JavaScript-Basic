@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML olayları ile tarih atama</title>
+</head>
+<body>
+        <p id="p1" onmouseover="yazirenk()">Tarih bilgisi için aşağıdaki butona tıklayınız..</p>
+        <input type="button" value="Tıklayınız:" style="background-color: brown; font-size: larger; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;" onclick="tarih()">
+    <script>
+        function tarih(){
+           var a = new Date();
+           var gun = a.getDate();
+           var ay= a.getMonth();
+           var yil = a.getFullYear();
+           var saat = a.getHours();
+           var dakika = a.getMinutes();
+           var saniye = a.getSeconds();
+           document.write("Tarih: "+gun+"/"+ay+"/"+yil+"<br> "+" Saat: "+saat+":"+dakika+":"+saniye);
+        }
+        function yazirenk(){
+            document.getElementById("p1").style.color="red";
+            document.getElementById("p1").style.fontSize="20px";
+        }
+    </script>
+    <p id="demo"></p>
+</body>
+</html>
