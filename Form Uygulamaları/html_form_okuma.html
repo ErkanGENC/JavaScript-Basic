@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML form yapılarından veri okuma</title>
+</head>
+<body>
+    <form >
+        Ad: <input type="text" id="ad"><br><br>
+
+        <input type="button" value="OK" onclick="yaz()">
+    </form>
+
+    <script>
+
+        function yaz(){
+
+           alert("Adınız: "+document.getElementById("ad").value);
+
+        }
+
+    </script>
+</body>
+</html>

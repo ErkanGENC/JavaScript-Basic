@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form işlemleri ile Sayının karesini alma</title>
+</head>
+
+<body>
+    <form>
+        Sayı: <input type="text" id="sayi"><br><br>
+        
+        Karesi:  <output ><textarea id="karesi" cols="2" rows="2"></textarea></output><br><br>
+        <input type="button" value="Hesapla" onclick="kare_al()">
+    </form>
+
+    <script>
+        function kare_al() {
+            var sayi, kare;
+
+            sayi = document.getElementById("sayi").value;
+            kare = sayi * sayi;
+
+            document.getElementById("karesi").innerHTML = kare;
+        }
+    </script>
+</body>
+
+</html>
