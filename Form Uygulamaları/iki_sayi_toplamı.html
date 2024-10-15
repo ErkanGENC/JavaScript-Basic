@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formdan alınan 2 sayının toplamı</title>
+    <style>
+        #sonuc {
+            border-style: solid;
+            border-radius: 2px;
+            border-width: 1px;
+            height: 30px;
+            width: 40px;
+            float: inline-end;
+            margin-right: 930px;
+        }
+    </style>
+</head>
+
+<body>
+    <form>
+        Sayi1: <input type="text" id="1">
+        Sayi2: <input type="text" id="2"><br><br>
+        <input type="button" value="Hesapla" onclick="iki_sayi_toplamı()"><br><br>
+        sonuc: <span id="sonuc"></span>
+
+    </form>
+    <script>
+        function iki_sayi_toplamı() {
+            var sayi1, sayi2, toplam = 0;
+            sayi1 = Number(document.getElementById("1").value);
+            sayi2 = Number(document.getElementById("2").value);
+
+            toplam = sayi1 + sayi2;
+
+            document.getElementById("sonuc").innerHTML = toplam;
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontrollü Form işlemleri ile Sayının karesini alma</title>
+</head>
+
+<body>
+    <form>
+        Sayı: <input type="text" id="sayi"><br><br>
+
+        Karesi: <output><textarea id="karesi" cols="2" rows="2"></textarea></output><br><br>
+        <input type="button" value="Hesapla" onclick="kare_al()">
+
+    </form>
+
+    <script>
+        function kare_al() {
+
+            var sayi = document.getElementById("sayi").value;
+
+            if (sayi == "") {
+                document.getElementById("sayi").style.backgroundColor = "red";
+                document.getElementById("sayi").focus();
+                alert("Lütfen geçerli bir sayı giriniz..!!");
+            }
+            else {
+                if (sayi <= 0) {
+                    alert("Lütfen pozitif sayılar giriniz.!!");
+                    document.getElementById("sayi").style.backgroundColor = "red";
+                    document.getElementById("sayi").focus();
+                }
+                else {
+                    kare = Number(sayi * sayi);
+                    document.getElementById("sayi").style.backgroundColor = "green";
+                    document.getElementById("karesi").style.backgroundColor = "aqua";
+                    document.getElementById("karesi").focus();
+                    document.getElementById("sayi").focus();
+                    document.getElementById("karesi").innerHTML = kare;
+                }
+            }
+
+
+        }
+    </script>
+</body>
+
+</html>
