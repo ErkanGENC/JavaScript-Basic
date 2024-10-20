@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Throw ile hata gönderme</title>
+</head>
+
+<body>
+    <form>
+        Ders Notu: <input type="text" id="dersnotu">
+        <input type="button" value="Yazdır" onclick="yazdir()">
+    </form>
+     <p id="hatailetisi"></p>
+     <p id="girilennot"></p>
+
+    <script>
+        function yazdir(){
+            var hata_iletisi,ders_notu;
+            //hata iletisini sıfırlıyoruz.
+            hata_iletisi=document.getElementById("hatailetisi");
+            hata_iletisi.innerHTML="";
+
+            //Kullanıcıdan ders notu alıyoruz..
+            ders_notu = document.getElementById("dersnotu").value;
+
+            //hata kontrolünü gerçekleştiriyoruz.
+            try{
+                if(ders_notu=="") throw "Ders notu Boş bırakılamaz.!!";
+                if(isNaN(ders_notu)) throw "Sayısal bir ifade giriniz..!!";
+                ders_notu=Number(ders_notu);
+                if(ders_notu<0 || ders_notu>10) throw "Sadece 0-10 arası değer giriniz.!!";
+            }
+            catch(err){
+                hata_iletisi.innerHTML="Hata: "+err;
+            }
+            finally{
+                document.getElementById("girilennot").innerHTML="Not: "+ders_notu;
+            }
+        }
+    </script>
+</body>
+
+</html>
